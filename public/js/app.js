@@ -18,7 +18,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageOne.textContent = 'Loading...';
     messageTwo.textContent = '';
     messageThree.textContent = '';
-    fetch(`http://localhost:3000/weather?address=${encodeURIComponent(location)}`).then(response => {
+    fetch(`http://weatherworld.onrender.com/weather?address=${encodeURIComponent(location)}`).then(response => {
         response.json().then(data => {
             if (data.error) {
                 messageOne.textContent = 'Error: ' + data.error;
